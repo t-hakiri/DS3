@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# ダクソ３のマッチングサイト
 
-Things you may want to cover:
+# 概要
+ダクソ３における協力プレイ（白サイン）様アプリ
 
-* Ruby version
+# バージョン
+ruby 2.6.5 / Rails 5.2.4.1
 
-* System dependencies
+# 機能一覧
 
-* Configuration
 
-* Database creation
+# カタログ
+https://docs.google.com/document/d/1zsraKttqIs2yJ3GdW_Qk2EQqkZef2IGYC5rwrcGx0hk/edit
 
-* Database initialization
+# ER図
+https://cacoo.com/diagrams/JCloTT1Ttp59yc8W/EB842
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# 使用予定Gem
+- faker
+- bootstrap
+- jquery-rails
