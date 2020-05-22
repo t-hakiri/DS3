@@ -1,0 +1,2 @@
+class PopularAreasController < ApplicationController
+end
