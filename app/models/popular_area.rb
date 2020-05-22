@@ -1,0 +1,2 @@
+class PopularArea < ApplicationRecord
+end
