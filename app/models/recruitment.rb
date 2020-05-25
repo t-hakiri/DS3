@@ -1,4 +1,4 @@
 class Recruitment < ApplicationRecord
 
-  has_many: popular_areas
+  has_many :popular_areas
 end
