@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2020_05_22_145655) do
   enable_extension "plpgsql"
 
   create_table "popular_areas", force: :cascade do |t|
+    t.integer "area_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
