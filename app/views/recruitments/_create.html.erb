@@ -1,0 +1,48 @@
+<div class="">
+  <button type="button" class="btn btn-primary mt-5" data-toggle="modal" data-target="#post"><%= t('recruitment.index.create') %></button>
+  <div class="modal fade" id="post" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+
+
+          <% if @recruitment.errors.present? %>
+            <ul id="error_explanation">
+              <% @recruitment.errors.full_messages.each do |r| %>
+                <li><%= r %></li>
+              <% end %>
+            </ul>
+          <% end %>
+
+          <%= form_with model: @recruitment, local: true do |f| %>
+            <div class="form-group">
+              <%= f.label :owner_level, t('recruitment.form.owner_level') %>
+              <%= f.number_field :owner_level, min:1, max:999, class: 'form-control', id: 'recruitment_owner_level' %>
+            </div>
+            <div class="form-group">
+              <%= f.label :area,  t('recruitment.form.area') %>
+              <%= f.select :area, Recruitment.areas.map{|k, v| [Recruitment.areas_i18n[k], v]}, {}, class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :game_model, t('recruitment.form.model') %>
+              <%= f.select :game_model, Recruitment.game_models.map{|k, v| [Recruitment.game_models_i18n[k], v]}, {}, class: "form-control" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :secret_word, t('recruitment.form.secret_word') %>
+              <%= f.text_field :secret_word, class: "form-control", id: "recruitment_secret_word" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :lap_count, t('recruitment.form.lap_count') %>
+              <%= f.number_field :lap_count, min:1 ,max:7, placeholder: t('recruitment.search.placeholder'), class: "form-control" %>
+            </div>
+          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+          <%= f.submit "完了", class: 'btn btn-primary' %>
+        </div>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>

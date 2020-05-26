@@ -14,10 +14,13 @@
   <div class="form-group">
     <%= f.label :area,  t('recruitment.form.area') %>
     <%= f.select :area, Recruitment.areas.map{|k, v| [Recruitment.areas_i18n[k], v]}, {}, class: "form-control" %>
+    <%# <%= f.select :area, Recruitment.areas.keys.map {|k| [k, k]} %> %>
   </div>
+
   <div class="form-group">
     <%= f.label :game_model, t('recruitment.form.model') %>
     <%= f.select :game_model, Recruitment.game_models.map{|k, v| [Recruitment.game_models_i18n[k], v]}, {}, class: "form-control" %>
+    <%# <%= f.select :game_model, Recruitment.game_models.keys.map {|k| [k, k]} %> %>
   </div>
   <div class="form-group">
     <%= f.label :secret_word, t('recruitment.form.secret_word') %>

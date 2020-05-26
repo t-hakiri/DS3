@@ -1,15 +1,14 @@
 
 <%= search_form_for @search do |f| %>
-
-  <p>
-    <%= f.label :owner_level_lt, t('recruitment.search.owner_level') %>
-    <%= f.number_field :owner_level_lt, min:1 ,max:999, placeholder: t('recruitment.search.placeholder') %>
-    <%= f.label :owner_level_lt, t('recruitment.search.owner_level_less_than') %>
-  </p>
   <p>
     <%= f.label :owner_level_gt, t('recruitment.search.owner_level') %>
     <%= f.number_field :owner_level_gt, min:1 ,max:999, placeholder: t('recruitment.search.placeholder') %>
     <%= f.label :owner_level_gt, t('recruitment.search.owner_level_greater_than') %>
+  </p>
+  <p>
+    <%= f.label :owner_level_lt, t('recruitment.search.owner_level') %>
+    <%= f.number_field :owner_level_lt, min:1 ,max:999, placeholder: t('recruitment.search.placeholder') %>
+    <%= f.label :owner_level_lt, t('recruitment.search.owner_level_less_than') %>
   </p>
   <p>
     <%= f.label :area_eq, t('recruitment.search.area') %>
