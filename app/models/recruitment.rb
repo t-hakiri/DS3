@@ -2,6 +2,11 @@ class Recruitment < ApplicationRecord
 
   has_many :popular_areas
 
+  validates :area, presence: true
+  validates :game_model, presence: true
+  validates :secret_word, length: {maximum: 10}
+
+
   enum game_model:{
     "PlayStation": 0,
     "PC": 1,
