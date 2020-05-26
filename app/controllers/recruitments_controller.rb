@@ -1,7 +1,5 @@
 class RecruitmentsController < ApplicationController
 
-  before_action :set_recruitment, only: [:show, :edit, :update, :destroy]
-
   def index
     @search = Recruitment.search(params[:q])
     @recruitments = @search.result.recent
@@ -12,10 +10,6 @@ class RecruitmentsController < ApplicationController
   def new
     @recruitment = Recruitment.new
   end
-
-  def show
-  end
-
 
   def create
     # @recruitment = Recruitment.new(recruitment_params)
@@ -29,30 +23,10 @@ class RecruitmentsController < ApplicationController
     end
   end
 
-  def edit
-  end
-
-  def update
-    if @recruitment.update(recruitment_params)
-      redirect_to @recruitment
-    else
-      render :edit
-    end
-  end
-
-  def destroy
-    @recruitment.destroy
-    redirect_to recruitments_url, notice: "募集を削除しました"
-  end
-
   private
 
   def recruitment_params
     params.require(:recruitment).permit(:owner_level, :area, :game_model, :secret_word, :lap_count)
-  end
-
-  def set_recruitment
-    @recruitment = Recruitment.find(params[:id])
   end
 
   def search_params
