@@ -14,7 +14,7 @@
       <tbody>
         <% @popular_areas.each do |p_area, point| %>
           <tr>
-            <td><%= p_area %></td>
+            <td><%= t("enums.recruitment.area.#{p_area}") %></td>
             <td><%= point %></td>
           </tr>
         <% end %>

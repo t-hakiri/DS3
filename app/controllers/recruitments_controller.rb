@@ -5,6 +5,8 @@ class RecruitmentsController < ApplicationController
   def index
     @search = Recruitment.search(params[:q])
     @recruitments = @search.result.recent
+    @recruitment = Recruitment.new
+
   end
 
   def new

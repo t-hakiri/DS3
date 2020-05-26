@@ -1,5 +1,7 @@
 ja:
   recruitment:
+    index:
+      create: 募集作成
     search:
       area: 攻略エリア
       model: 機種
