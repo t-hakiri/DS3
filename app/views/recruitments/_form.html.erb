@@ -13,11 +13,11 @@
   </div>
   <div class="form-group">
     <%= f.label :area %>
-    <%= f.text_field :area,  class: "form-control", id: "recruitment_owner_area" %>
+    <%= f.select :area, Recruitment.areas.keys.to_a, {}, class: "form-control", id: "recruitment_owner_area" %>
   </div>
   <div class="form-group">
     <%= f.label :game_model %>
-    <%= f.text_field :game_model, class: "form-control", id: "recruitment_game_model" %>
+    <%= f.select :game_model, Recruitment.game_models.keys.to_a, {}, class: "form-control", id: "recruitment_game_model" %>
   </div>
   <div class="form-group">
     <%= f.label :secret_word %>
