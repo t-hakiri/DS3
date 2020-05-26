@@ -3,7 +3,8 @@ class RecruitmentsController < ApplicationController
   before_action :set_recruitment, only: [:show, :edit, :update, :destroy]
 
   def index
-    @recruitments = Recruitment.all.recent
+    @search = Recruitment.search(params[:q])
+    @recruitments = @search.result.recent
   end
 
   def new
@@ -47,6 +48,10 @@ class RecruitmentsController < ApplicationController
 
   def set_recruitment
     @recruitment = Recruitment.find(params[:id])
+  end
+
+  def search_params
+    params.require(:q).permit!
   end
 
 end
