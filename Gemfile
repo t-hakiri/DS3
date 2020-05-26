@@ -52,6 +52,9 @@ gem 'rails-i18n'
 # 検索
 gem 'ransack'
 
+# enum
+gem 'enum_help'
+
 
 
 group :development, :test do

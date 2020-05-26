@@ -3,16 +3,9 @@ class RecruitmentsController < ApplicationController
   before_action :set_recruitment, only: [:show, :edit, :update, :destroy]
 
   def index
-    # @recruitments = Recruitment.all.recent
-    @q = Recruitment.ransack(params[:q])
-    @recruitments = @q.result(distinct: true)
+    @search = Recruitment.search(params[:q])
+    @recruitments = @search.result.recent
   end
-
-  def search
-    @q = Recruitment.search(search_params)
-    @recruitments = @q.result(distinct: true)
-  end
-
 
   def new
     @recruitment = Recruitment.new

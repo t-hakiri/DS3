@@ -8,23 +8,23 @@
 
 <%= form_with model: recruitment, local: true do |f| %>
   <div class="form-group">
-    <%= f.label :owner_level %>
+    <%= f.label :owner_level, t('recruitment.form.owner_level') %>
     <%= f.text_field :owner_level, class: 'form-control', id: 'recruitment_owner_level' %>
   </div>
   <div class="form-group">
-    <%= f.label :area %>
-    <%= f.select :area, Recruitment.areas.keys.to_a, {}, class: "form-control", id: "recruitment_owner_area" %>
+    <%= f.label :area,  t('recruitment.form.area') %>
+    <%= f.select :area, Recruitment.areas.map{|k, v| [Recruitment.areas_i18n[k], v]}, {}, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :game_model %>
+    <%= f.label :game_model, t('recruitment.form.model') %>
     <%= f.select :game_model, Recruitment.game_models.keys.to_a, {}, class: "form-control", id: "recruitment_game_model" %>
   </div>
   <div class="form-group">
-    <%= f.label :secret_word %>
+    <%= f.label :secret_word, t('recruitment.form.secret_word') %>
     <%= f.text_field :secret_word, class: "form-control", id: "recruitment_secret_word" %>
   </div>
   <div class="form-group">
-    <%= f.label :lap_count %>
+    <%= f.label :lap_count, t('recruitment.form.lap_count') %>
     <%= f.text_field :lap_count, class: "form-control", id: "recruitment_lap_count" %>
   </div>
   <%= f.submit "完了", class: 'btn btn-primary' %>

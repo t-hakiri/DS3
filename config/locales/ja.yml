@@ -1,1 +1,65 @@
 ja:
+  recruitment:
+    search:
+      area: 攻略エリア
+      model: 機種
+      lap_count: 周回数
+      owner_level: 募集主のレベル
+      owner_level_less_than: 未満
+      owner_level_greater_than: 以上
+      submit: 検索
+      placeholder: 指定なし
+    form:
+      owner_level: 募集主のレベル
+      area: 攻略エリア
+      model: 機種
+      secret_word: 合言葉
+      lap_count: 周回数
+  enums:
+    recruitment:
+      game_model:
+        model1: PlayStation
+        model2: PC
+      area:
+        area1: ロスリックの高壁
+        area2: 高壁の塔
+        area3: 高壁の下
+        area4: 不死街
+        area5: 崖下の地下室
+        area6: ボロ橋のたもと
+        area7: 生贄の道
+        area8: 道半ばの砦
+        area9: 磔の森
+        area10: 深みの聖堂
+        area11: 清拭の小協会
+        area12: ファランの城塞
+        area13: 城塞跡
+        area14: 城塞外縁
+        area15: カーサスの地下墓
+        area16: デーモン遺跡
+        area17: 冷たい谷のイルシール
+        area18: イルシール市街
+        area19: ヨルシカ教会
+        area20: 町外れの廃屋
+        area21: イルシールの地下牢
+        area22: 罪の都
+        area23: アノールロンド
+        area24: 冷たい谷の踊り子・妖王の庭
+        area25: 大書庫
+        area26: 古竜の頂
+        area27: 竜神の霊廟
+        area28: 大鐘楼
+        area29: 最初の火の炉
+        area30: 吊り橋を臨む洞
+        area31: アリアンデルの礼拝所
+        area32: 絵画の底
+        area33: 鴉村
+        area34: 雪の山道
+        area35: 吹き溜まり
+        area36: 土の塔の残骸
+        area37: 土の塔の残骸・内部
+        area38: 王廟の見張り
+        area39: 輪の内壁
+        area40: 輪の市街
+        area41: 共同墓地
+        area42: フィリアノールの寝所
