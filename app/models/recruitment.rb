@@ -6,6 +6,7 @@ class Recruitment < ApplicationRecord
   validates :game_model, presence: true
   validates :secret_word, length: {maximum: 10}
 
+  scope :recent, -> {order(created_at: :desc)}
 
   enum game_model:{
     "PlayStation": 0,
