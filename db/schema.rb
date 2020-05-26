@@ -15,12 +15,6 @@ ActiveRecord::Schema.define(version: 2020_05_26_131522) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "popular_areas", force: :cascade do |t|
-    t.integer "area_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "recruitments", force: :cascade do |t|
     t.integer "owner_level", null: false
     t.integer "area", default: 0, null: false
