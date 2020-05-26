@@ -14,7 +14,7 @@
   </p>
   <p>
     <%= f.label :area_eq, t('recruitment.search.area') %>
-    <%= f.select :area_eq, Recruitment.areas.map{|k, v| [Recruitment.areas_i18n[k], v]}, :include_blank => t('recruitment.search.placeholder') %>
+    <%= f.select :area_eq, Recruitment.areas.map{|k, v| [Recruitment.areas_i18n[k], v]}, {:include_blank => t('recruitment.search.placeholder')}, {class: 'mdb-select md-form'} %>
     <button name="action" value="clear" type="button" class="btn btn-secondary rounded-circle p-0 clear-area" style="width:2rem;height:2rem;"><%= t('recruitment.search.reset_button') %></button>
   </p>
   <p>

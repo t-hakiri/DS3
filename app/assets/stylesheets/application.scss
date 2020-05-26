@@ -1,5 +1,9 @@
- @import "bootstrap";
+/*
+*= require_tree .
+*= require_self
+*/
+@import "bootstrap";
 
- body {
+body {
   background-image: url(bg.jpg);
- }
+}
