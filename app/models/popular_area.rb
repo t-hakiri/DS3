@@ -1,4 +1,4 @@
 class PopularArea < ApplicationRecord
 
-  belongs_to: recruitments
+  belongs_to :recruitments
 end
