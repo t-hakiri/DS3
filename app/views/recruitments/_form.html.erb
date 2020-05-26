@@ -1,0 +1,19 @@
+<% if recruitment.errors.present? %>
+  <ul id="error_explanation">
+    <% recruitment.errors.full_messages.each do |r| %>
+      <li><%= r %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<p>test</p>
+
+<% form_with model: recruitment, local: true do |f| %>
+  <div class="form-group">
+    <%= f.label :owner_level %>
+    <div class="form-control", id="task_name">
+      <%= f.text_field :owner_level %>
+    </div>
+  </div>
+<% end %>
+
