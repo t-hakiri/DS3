@@ -4,25 +4,31 @@
     <%= f.label :owner_level_gt, t('recruitment.search.owner_level') %>
     <%= f.number_field :owner_level_gt, min:1 ,max:999, placeholder: t('recruitment.search.placeholder') %>
     <%= f.label :owner_level_gt, t('recruitment.search.owner_level_greater_than') %>
+    <button name="action" value="clear" type="button" class="btn btn-secondary rounded-circle p-0 clear-owner-level" style="width:2rem;height:2rem;"><%= t('recruitment.search.reset_button') %></button>
   </p>
   <p>
     <%= f.label :owner_level_lt, t('recruitment.search.owner_level') %>
     <%= f.number_field :owner_level_lt, min:1 ,max:999, placeholder: t('recruitment.search.placeholder') %>
     <%= f.label :owner_level_lt, t('recruitment.search.owner_level_less_than') %>
+    <button name="action" value="clear" type="button" class="btn btn-secondary rounded-circle p-0 clear-owner-level-lt" style="width:2rem;height:2rem;"><%= t('recruitment.search.reset_button') %></button>
   </p>
   <p>
     <%= f.label :area_eq, t('recruitment.search.area') %>
     <%= f.select :area_eq, Recruitment.areas.map{|k, v| [Recruitment.areas_i18n[k], v]}, :include_blank => t('recruitment.search.placeholder') %>
+    <button name="action" value="clear" type="button" class="btn btn-secondary rounded-circle p-0 clear-area" style="width:2rem;height:2rem;"><%= t('recruitment.search.reset_button') %></button>
   </p>
   <p>
     <%= f.label :game_model_eq, t('recruitment.search.model') %>
     <%= f.select :game_model_eq, Recruitment.game_models.map{|k, v| [Recruitment.game_models_i18n[k], v]}, :include_blank => t('recruitment.search.placeholder') %>
+    <button name="action" value="clear" type="button" class="btn btn-secondary rounded-circle p-0 clear-game-model" style="width:2rem;height:2rem;"><%= t('recruitment.search.reset_button') %></button>
   </p>
   <p>
     <%= f.label :lap_count_eq, t('recruitment.search.lap_count') %>
     <%= f.number_field :lap_count_eq, min:1 ,max:7, placeholder: t('recruitment.search.placeholder') %>
+    <button name="action" value="clear" type="button" class="btn btn-secondary rounded-circle p-0 clear-lap-count" style="width:2rem;height:2rem;"><%= t('recruitment.search.reset_button') %></button>
   </p>
 
+  <button name="action" value="clear" type="button" class="btn btn-secondary clear-button"><%= t('recruitment.search.reset') %></button>
 
   <%= f.submit t('recruitment.search.submit'), class: "btn btn-primary" %>
 <% end %>

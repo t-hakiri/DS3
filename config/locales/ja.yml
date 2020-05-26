@@ -20,6 +20,8 @@ ja:
       owner_level_greater_than: 以上
       submit: 検索
       placeholder: 指定なし
+      reset: 検索条件を全てリセット
+      reset_button: 空
     form:
       owner_level: 募集主のレベル
       area: 攻略エリア
