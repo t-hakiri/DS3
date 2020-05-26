@@ -2,9 +2,10 @@ class Recruitment < ApplicationRecord
 
   has_many :popular_areas
 
-  validates :area, presence: true
-  validates :game_model, presence: true
+  validates :area, presence: true, numericality: { only_integer: true }
+  validates :game_model, presence: true, numericality: { only_integer: true }
   validates :secret_word, length: {maximum: 10}
+  validates :lap_count, presence: true, numericality: { less_than: 8 }
 
   scope :recent, -> {order(created_at: :desc)}
 
