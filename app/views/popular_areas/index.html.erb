@@ -6,19 +6,15 @@
   <table class='table table-hover'>
     <thead class='thead-default'>
       <tr>
-        <th>募集主のLevel</th>
-        <th>攻略エリア</th>
-        <th>機種</th>
-        <th>合言葉</th>
-        <th>周回数</th>
-        <th>作成日</th>
+        <th>人気エリア</th>
+        <th>部屋数</th>
       </tr>
     </thead>
     <tbody>
-      <% @popular_areas.each do |p_area| %>
+      <% @popular_areas.each do |p_area, point| %>
         <tr>
-          <td><%= p_area.owner_level %></td>
-          <td><%= p_area.area %></td>
+          <td><%= p_area %></td>
+          <td><%= point %></td>
         </tr>
       <% end %>
     </tbody>
