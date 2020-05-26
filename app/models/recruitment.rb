@@ -1,7 +1,5 @@
 class Recruitment < ApplicationRecord
 
-<<<<<<< HEAD
-=======
   has_many :popular_areas
 
   validates :area, presence: true, numericality: { only_integer: true }
@@ -60,5 +58,4 @@ class Recruitment < ApplicationRecord
     共同墓地: 40,
     フィリアノールの寝所: 41,
   }
->>>>>>> master
 end
