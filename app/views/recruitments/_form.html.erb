@@ -6,14 +6,27 @@
   </ul>
 <% end %>
 
-<p>test</p>
-
-<% form_with model: recruitment, local: true do |f| %>
+<%= form_with model: recruitment, local: true do |f| %>
   <div class="form-group">
     <%= f.label :owner_level %>
-    <div class="form-control", id="task_name">
-      <%= f.text_field :owner_level %>
-    </div>
+    <%= f.text_field :owner_level, class: 'form-control', id: 'recruitment_owner_level' %>
   </div>
+  <div class="form-group">
+    <%= f.label :area %>
+    <%= f.text_field :area,  class: "form-control", id: "recruitment_owner_area" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :game_model %>
+    <%= f.text_field :game_model, class: "form-control", id: "recruitment_game_model" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :secret_word %>
+    <%= f.text_field :secret_word, class: "form-control", id: "recruitment_secret_word" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :lap_count %>
+    <%= f.text_field :lap_count, class: "form-control", id: "recruitment_lap_count" %>
+  </div>
+  <%= f.submit "完了", class: 'btn btn-primary' %>
 <% end %>
 

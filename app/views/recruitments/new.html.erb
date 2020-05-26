@@ -1,30 +1,8 @@
-<h1> タスクの新規登録</h1>
+<h1> 募集の新規登録</h1>
 
 <div class="nav justify-content-end">
   <%= link_to '一覧', recruitments_path, class: 'nav-link' %>
 </div>
 
-
-<% if @recruitment.errors.present? %>
-  <ul id="error_explanation">
-    <% @recruitment.errors.full_messages.each do |r| %>
-      <li><%= r %></li>
-    <% end %>
-  </ul>
-<% end %>
-
-<p>test</p>
-
-<%= form_with model: @recruitment, local: true do |f| %>
-  <div class="form-group">
-    <%= f.label :owner_level %>
-    <div class="form-control", id="task_name">
-      <%= f.text_field :owner_level %>
-    </div>
-  </div>
-<% end %>
-
-<p>test</p>
-
-
+<%= render partial: 'form', locals: {recruitment: @recruitment} %>
 

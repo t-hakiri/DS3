@@ -1,0 +1,36 @@
+<h1> 募集詳細</h1>
+
+<div class="nav justify-content-end">
+  <%= link_to '一覧', recruitments_path, class: 'nav-link' %>
+</div>
+
+<div class='mb-3'>
+  <table class='table table-hover'>
+    <tbody>
+      <tr>
+        <th>owner_level</th>
+        <td><%= @recruitment.owner_level %></td>
+      </tr>
+      <tr>
+        <th>area</th>
+        <td><%= @recruitment.area %></td>
+      </tr>
+      <tr>
+        <th>game_model</th>
+        <td><%= @recruitment.game_model %></td>
+      </tr>
+      <tr>
+        <th>secret_word</th>
+        <td><%= @recruitment.secret_word %></td>
+      </tr>
+      <tr>
+        <th>lap_count</th>
+        <td><%= @recruitment.lap_count %></td>
+      </tr>
+      <tr>
+        <th>created</th>
+        <td><%= @recruitment.created_at %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
