@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: 'recruitments#index'
 
-  resources :recruitments
+  resources :recruitments, only: %i!index new create!
 
 end
