@@ -22,7 +22,7 @@
           <td><%= r.game_model %></td>
           <td><%= r.secret_word %></td>
           <td><%= r.lap_count %></td>
-          <td><%= r.created_at %></td>
+          <td><%= r.created_at.strftime("%m月%d日 %H:%M") %></td>
         </tr>
       <% end %>
     </tbody>
