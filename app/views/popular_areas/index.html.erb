@@ -1,0 +1,27 @@
+<h1>タスク一覧</h1>
+
+<%= link_to '新規募集開始', new_recruitment_path, class: 'btn btn-primary' %>
+
+<div class='mb-3'>
+  <table class='table table-hover'>
+    <thead class='thead-default'>
+      <tr>
+        <th>募集主のLevel</th>
+        <th>攻略エリア</th>
+        <th>機種</th>
+        <th>合言葉</th>
+        <th>周回数</th>
+        <th>作成日</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @popular_areas.each do |p_area| %>
+        <tr>
+          <td><%= p_area.owner_level %></td>
+          <td><%= p_area.area %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
