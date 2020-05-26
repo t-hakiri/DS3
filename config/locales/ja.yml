@@ -1,5 +1,16 @@
 ja:
   recruitment:
+    index:
+      title: 白サイン募集
+      create: 募集作成
+      owner_level: ホストのレベル
+      area: 篝火
+      model: 機種
+      secret_word: 合言葉
+      lap_count: 周回数
+      created: 作成日
+      month: 月
+      day: 日
     search:
       area: 攻略エリア
       model: 機種
@@ -9,12 +20,16 @@ ja:
       owner_level_greater_than: 以上
       submit: 検索
       placeholder: 指定なし
+      reset: 検索条件を全てリセット
+      reset_button: 空
     form:
       owner_level: 募集主のレベル
       area: 攻略エリア
       model: 機種
       secret_word: 合言葉
       lap_count: 周回数
+      submit: 募集開始
+      close: 閉じる
   enums:
     recruitment:
       game_model:

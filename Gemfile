@@ -39,6 +39,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # ブートストラップ
 gem 'bootstrap'
 
+gem 'jquery-rails'
+
 # テストデータを入れる
 gem 'faker'
 

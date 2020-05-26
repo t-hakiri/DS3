@@ -10,17 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_26_131522) do
+ActiveRecord::Schema.define(version: 2020_05_26_191447) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "recruitments", force: :cascade do |t|
-    t.integer "owner_level", null: false
+    t.integer "owner_level", default: 100, null: false
     t.integer "area", default: 0, null: false
     t.integer "game_model", default: 0, null: false
     t.string "secret_word"
-    t.integer "lap_count"
+    t.integer "lap_count", default: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

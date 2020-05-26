@@ -1,4 +1,4 @@
-50.times do
+200.times do
   Recruitment.create(
       owner_level: rand(100) + 1,
       area: rand(42),
