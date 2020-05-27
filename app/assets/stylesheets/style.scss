@@ -9,11 +9,50 @@ body {
 .view {
   margin-top: -56px;
 }
-.navbar {
-  z-index: 1;
+#position_fixed{
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 html,
 body,
 header,
 .view {
+  height: 550px;
+}
+.nav-test{
+  margin: 0;
+  vertical-align: middle;
+}
+.test-nav2{
+  margin:0;
+}
+.test3{
+  color: white;
+  padding-right: 1rem;
+  margin-bottom: 0;
+}
+
+.view {
+  background: url("https://www.darksouls.jp/static/img/lineup/detail/screenshot/product_099_2.jpg")no-repeat center center;
+  background-size: cover;
+}
+@media (min-width: 768px) {
+  .view {
+      overflow: visible;
+      margin-top: -56px;
+  }
+}
+.navbar {
+  z-index: 1;
+}
+
+html,
+body,
+header,
+.view {
+  height: 550px;
+}
+.mt-50{
+  margin-top: 60px;
 }

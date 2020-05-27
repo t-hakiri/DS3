@@ -1,0 +1,8 @@
+
+<%= search_form_for @search do |f| %>
+  <p class="test-nav2">
+    <%= f.label :area_eq, t('recruitment.search.area'), class: "test3" %>
+    <%= f.select :area_eq, Recruitment.areas.map{|k, v| [Recruitment.areas_i18n[k], v]}, {:include_blank => t('recruitment.search.placeholder')}, {class: 'mdb-select md-form nav-test'} %>
+    <%= f.submit t('recruitment.search.submit'), class: "btn btn-light" %>
+  </p>
+<% end %>
