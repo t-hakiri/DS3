@@ -1,0 +1,24 @@
+<div class="container">
+
+  <div class='mb-3 card'>
+    <table class='table table-hover'>
+      <thead class='thead-default'>
+        <tr>
+          <th>人気エリア</th>
+          <th>部屋数</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @popular_areas.each do |p_area, point| %>
+          <tr>
+            <td><%= t("enums.recruitment.area.#{p_area}") %></td>
+            <td><%= point %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+

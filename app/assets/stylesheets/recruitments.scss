@@ -1,3 +1,43 @@
 // Place all the styles related to the recruitments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.detaile{
+  margin-top: 30px;
+  text-align: center;
+}
+
+.search_detail{
+  margin-top: 30px;
+  text-align: center;
+  .search_detail_title{
+    text-align: center;
+  }
+}
+
+.search_area{
+  margin-top: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+#recruitment_search{
+  text-align: center;
+}
+#q_owner_level_gt{
+  width: 80px;
+}
+#q_owner_level_lt{
+  width: 80px;
+}
+#q_lap_count_eq{
+  width: 80px;
+}
+
+.index_wrap{
+  margin-top: 30px;
+}
+
+.ranking{
+  text-align: center;
+  margin-top: 30px;
+}

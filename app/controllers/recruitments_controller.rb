@@ -3,6 +3,7 @@ class RecruitmentsController < ApplicationController
   def index
     @search = Recruitment.search(params[:q])
     @recruitments = @search.result.recent
+    @popular_areas = Recruitment.group(:area).order(count_all: :desc).count.first(6)
     @recruitment = Recruitment.new
 
   end
@@ -19,6 +20,7 @@ class RecruitmentsController < ApplicationController
     else
       @search = Recruitment.search(params[:q])
       @recruitments = @search.result.recent
+      @popular_areas = Recruitment.group(:area).order(count_all: :desc).count.first(6)
       render action: :index
     end
   end
