@@ -57,7 +57,10 @@
     </div>
   </div>
   </header>
-    <%= yield %>
+  <% if notice.present? %>
+    <p id="notice" class="notice_message"><%= notice %></p>
+  <% end %>
+  <%= yield %>
 
     <%# <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/js/mdb.min.js"></script> %>
   </body>
