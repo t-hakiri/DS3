@@ -15,8 +15,7 @@ class RecruitmentsController < ApplicationController
   def create
 
     @new_recruitment = CreateForm.new(recruitment_params)
-    @new_recruitment.save
-    redirect_to recruitments_path, notice: @new_recruitment.save ? "募集を開始しました。" : "募集の開始に失敗しました。"
+    redirect_to recruitments_path, notice: @new_recruitment.save ? t('recruitment.index.start') : t('recruitment.index.false')
 
   end
 
