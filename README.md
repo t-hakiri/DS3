@@ -21,3 +21,8 @@ https://cacoo.com/diagrams/mXBKtRCaA1odDvRI/873A3
 - faker
 - bootstrap
 - jquery-rails
+- ransack
+- enum_help
+- rails-i18n
+- better_errors
+- binding_of_caller

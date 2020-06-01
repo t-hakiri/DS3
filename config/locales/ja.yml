@@ -14,6 +14,8 @@ ja:
       search_detail: 絞り込み検索
       ranking: 人気エリアランキング
       detail_title: ●
+      start: 募集を開始しました。
+      false: 募集の開始に失敗しました。
     search:
       area: 攻略エリア
       model: 機種
