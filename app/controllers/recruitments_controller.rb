@@ -14,7 +14,7 @@ class RecruitmentsController < ApplicationController
 
   def create
     # @recruitment = Recruitment.new(recruitment_params)
-    @recruitment = Recruitment.new(owner_level: recruitment_params[:owner_level], area: recruitment_params[:area].to_i, game_model: recruitment_params[:game_model].to_i, secret_word: recruitment_params[:secret_word], lap_count: recruitment_params[:lap_count])
+    @recruitment = Recruitment.new(owner_level: recruitment_params[:owner_level], area: :area1, game_model: recruitment_params[:game_model].to_i, secret_word: recruitment_params[:secret_word], lap_count: recruitment_params[:lap_count])
     if @recruitment.save
       redirect_to recruitments_path, notice: "募集を開始しました"
     else
