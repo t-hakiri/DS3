@@ -5,6 +5,7 @@ class RecruitmentsController < ApplicationController
     @recruitments = @search.result.recent
     @popular_areas = Recruitment.group(:area).order(count_all: :desc).count.first(6)
     @recruitment = Recruitment.new
+    binding.irb
 
   end
 
